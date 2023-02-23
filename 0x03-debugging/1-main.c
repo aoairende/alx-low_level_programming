@@ -9,7 +9,7 @@
  * Don’t add or remove any lines of code, as we will be checking
  * your line count. You are only allowed to comment out existing code.
  *
- * Return: Always 0
+ * Return: 0
  */
 
 int main(void)
