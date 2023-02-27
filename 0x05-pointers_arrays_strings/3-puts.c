@@ -8,7 +8,7 @@
  * a new line, to stdout.
  * Prototype: void _puts(char *str);
  *
- * Return: Always 0
+ * Return: the length of the string
  */
 
 void _puts(char *str)
