@@ -2,9 +2,9 @@
 
 /**
  * leet - encodes a string into 1337
- * @s: string to encode
+ * @n: string to encode
  *
- * Description: Write a function that encodes a string into 1337.
+ * Decsription: Write a function that encodes a string into 1337.
  *
  * Letters a and A should be replaced by 4
  * Letters e and E should be replaced by 3
@@ -18,10 +18,10 @@
  * You are not allowed to use switch
  * You are not allowed to use any ternary operation
  *
- * Return: address of s
+ * Return: the value of n
  */
 
-char *leet(char *s)
+char *leet(char *n)
 {
 	int x, y;
 	char s1[] = "aAeEoOtTlL";
