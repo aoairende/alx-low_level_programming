@@ -23,18 +23,19 @@
 
 char *leet(char *s)
 {
-	int i, j;
-	char a[] = "aAeEoOtTlL";
-	char b[] = "4433007711";
+	int x, y;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	for (i = 0; *(s + i); i++)
+	for (x = 0; n[x] != '\0'; x++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (y = 0; y < 10; y++)
 		{
-			if (a[j] == s[i])
-				s[i] = b[j];
+			if (n[x] == s1[y])
+			{
+				n[x] = s2[y];
+			}
 		}
 	}
-
-	return (s);
+	return (n);
 }
