@@ -7,7 +7,7 @@
  * list_len - Entry point
  *
  * Description: Write a function that adds a new node at the beginning of
- * a list_t list.
+ * a list_t list
  *
  * @h: name of the list
  *
