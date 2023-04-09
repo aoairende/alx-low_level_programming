@@ -1,16 +1,11 @@
 #include "main.h"
 
 /**
- * binary_to_unit - Entry point
- *
- * Description: Write a function that converts a binary number to a
- * unsigned int.
- *
+ * binary_to_unit - converts a binary number to an unsigned int.
  * @b: points to a string of chars
  *
  * Return: the converted number
  */
-
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
