@@ -11,24 +11,18 @@
  * Return: the converted number
  */
 
-unsigned int binary_to_uint(const char *b)
-{
-	int x;
-	unsigned int y;
-
-	y = 0;
-	if (!b)
-		return (0);
-	for (x = 0; b[x] != '\0'; x++)
-	{
-		if (b[x] != '0' && b[x] != '1')
-			return (0);
-	}
-	for (x = 0; b[x] != '\0'; x++)
-	{
-		y <<= 1;
-		if (b[x] == '1')
-			y += 1;
-	}
-	return (y);
+unsigned int binary_to_uint(const char *b) {
+    unsigned int result = 0;
+    if (b == NULL) {
+        return 0;
+    }
+    for (int i = 0; b[i] != '\0'; i++) {
+        if (b[i] == '0' || b[i] == '1') {
+            result = result << 1;
+            result += b[i] - '0';
+        } else {
+            return 0;
+        }
+    }
+    return result;
 }
