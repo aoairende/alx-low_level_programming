@@ -33,25 +33,25 @@ unsigned long int _power(unsigned int base, unsigned int pow)
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int s, t;
-	char u;
+	unsigned long int dev, result;
+	char flag;
 
-	u = 0;
-	s = _power(2, sizeof(unsigned long int) * 8 - 1);
+	flag = 0;
+	dev = _power(2, sizeof(unsigned long int) * 8 - 1);
 
-	while (s != 0)
+	while (dev != 0)
 	{
-		t = n & s;
-		if (t == s)
+		result = n & dev;
+		if (result == dev)
 		{
-			u = 1;
+			flag = 1;
 			_putchar('1');
 
 		}
-		else if (u == 1 || s == 1)
+		else if (flag == 1 || dev == 1)
 		{
 			_putchar('0');
 		}
-		s >>= 1;
+		dev >>= 1;
 	}
 }
