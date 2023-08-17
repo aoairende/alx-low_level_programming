@@ -10,19 +10,19 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	// Initialize the length counter.
+	/* Initialize the length counter. */
 	size_t length = 0;
-	// Initialize a pointer to the current node.
+	/* Initialize a pointer to the current node. */
 	const dlistint_t *current_node = NULL;
 
-	// Check if the list is empty.
+	/* Check if the list is empty. */
 	if (!h)
 		return (length);
 
-	// Set the current node pointer to the head of the list.
+	/* Set the current node pointer to the head of the list. */
 	current_node = h;
 
-	// Iterate the linked list and print each node's data
+	/* Iterate the linked list and print each node's data. */
 	while (current_node)
 	{
 		length++;
