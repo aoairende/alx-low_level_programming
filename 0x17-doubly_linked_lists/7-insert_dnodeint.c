@@ -1,51 +1,62 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * insert_dnodeint_at_index - inserts a new node at a given position.
- *
- * @h: head of the list
- * @idx: index of the list
- * @n: new node data
- *
- * Return: the address of the new node, or NULL if it failed
- */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+* insert_dnodeint_at_index - inserts a new node at a given position.
+*
+* @head: pointer to head pointer to the list.
+* @idx: index of the list where the new node should be added.
+* @n: number to insert.
+*
+* Return: the address of the new node, or NULL if it failed.
+*/
+
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
+				     unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	dlistint_t *node = *h;
-	dlistint_t *old = NULL, *new = NULL;
+	dlistint_t *current_node = *head, *previous_node = NULL, *temp = NULL;
+	unsigned int current_index = 0;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	if (!head || (!current_node && idx != 0))
 		return (NULL);
-	new->n = n;
-	new->prev = NULL;
-	new->next = NULL;
-	if (node == NULL && idx == 0)
-	{
-		*h = new;
-		return (new);
-	}
-	while (node && node->prev)
-		node = node->prev;
 
-	while (node != NULL && idx != i)
-	{
-		i++;
-		old = node;
-		node = node->next;
-	}
-	if (old)
-	{
-		new->prev = old;
-		old->next = new;
-	}
-	if (node)
-	{
-		new->next = node;
-		node->prev = new;
-	}
+	/* Allocate memory for the new node. */
+	temp = malloc(sizeof(dlistint_t));
+	if (!temp)
+		return (NULL);
+	temp->n = n;
+	temp->next = NULL;
+	temp->prev = NULL;
 
-	return (new);
+	/* Traverse to the desired index or the end. */
+	while (current_index != idx && current_node)
+	{
+		previous_node = current_node;
+		current_node = current_node->next;
+		current_index++;
+	}
+	/* Insert at the beginning if index is 0 and the list is empty.*/
+	if (!current_node && idx == 0)
+		*head = temp;
+	/* Insert at the beginning when previous_node is NULL. */
+	else if (!previous_node)
+	{
+		temp->next = current_node;
+		(*head)->prev = temp;
+		*head = temp;
+	}
+	/* Insert at the desired index. */
+	else if (current_index == idx)
+	{
+		previous_node->next = temp;
+		temp->prev = previous_node;
+		temp->next = current_node;
+		if (current_node)
+			current_node->prev = temp;
+	}
+	else
+	{
+		free(temp);
+		temp = NULL;
+	}
+	return (temp);
 }
