@@ -38,10 +38,10 @@ int search_highest_no(char *usrn, int len)
 
 /**
 * mult_char - Multiplies each character of username
-* 
+*
 * @usrn: username.
 * @len: length of username.
-* 
+*
 * Return: Multiplied character.
 */
 
@@ -64,7 +64,7 @@ int mult_char(char *usrn, int len)
 
 /**
 * gen_rand_char - Generates random character.
-* 
+*
 * @usrn: username.
 *
 * Return: Random generated character.
