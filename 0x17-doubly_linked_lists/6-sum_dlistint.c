@@ -2,7 +2,7 @@
 
 /**
 * sum_dlistint - returns the sum of data of a listint_t linked list.
-* 
+*
 * @head: pointer to head of the list
 * Return: sum of data in list
 */
