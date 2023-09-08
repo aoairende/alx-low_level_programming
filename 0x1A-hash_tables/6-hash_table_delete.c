@@ -16,6 +16,7 @@ void hash_table_delete(hash_table_t *ht)
     /* Iterate through the array of the hash table. */
 	for (i = 0; i < ht->size; i++)
 	{
+
         /* Free the linked list at the current index. */
 		free_list(ht->array[i]);
 	}
