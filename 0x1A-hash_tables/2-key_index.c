@@ -2,10 +2,10 @@
 
 /**
  * key_index - Computes index of a key.
- * 
+ *
  * @key: A pointer to the key.
  * @size: A size of array in the hash table.
- * 
+ *
  * Return: The index where a hash node with tje given key will be stored.
 */
 

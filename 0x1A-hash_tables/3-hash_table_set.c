@@ -2,11 +2,11 @@
 
 /**
  * hash_table_set - Adds an element to the hash table.
- * 
+ *
  * @ht: A pointer to the hash table.
  * @key: A pointer to the key.
  * @value: A pointer to the value.
- * 
+ *
  * Return: 1 if success, 0 otherwise
 */
 
@@ -56,10 +56,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 /**
  * create_node - Creates a new hash node with the given key and value.
- * 
+ *
  * @key: A pointer to the key.
  * @value: A pointer to the value.
- * 
+ *
  * Return: The created hash node.
 */
 
@@ -104,7 +104,7 @@ hash_node_t *create_node(const char *key, const char *value)
 
 /**
  * free_node - Deallocates memory for a hash node.
- * 
+ *
  * @node: A pointer to the node to free.
 */
 

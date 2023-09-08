@@ -2,7 +2,7 @@
 
 /**
  * hash_table_delete - Deletes a hash table and itrs contents.
- * 
+ *
  * @ht: A pointer to the hash table to be deleted.
 */
 
@@ -25,7 +25,7 @@ void hash_table_delete(hash_table_t *ht)
 
 /**
  * free_list - Frees a linked list of hash nodes.
- * 
+ *
  * @head: A pointer to the begining of linked list.
  */
 

@@ -2,9 +2,9 @@
 
 /**
  * hash_table_create - Creates a hash table.
- * 
+ *
  * @size: Size of the hash table.
- * 
+ *
  * Return: If an error occurs, NULL, otherwise pointer to the new hash table.
 */
 

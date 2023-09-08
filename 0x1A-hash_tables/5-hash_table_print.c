@@ -2,7 +2,7 @@
 
 /**
  * hash_table_print - Prints the contents of a hash table.
- * 
+ *
  * @ht: A pointer to the hash table.
 */
 

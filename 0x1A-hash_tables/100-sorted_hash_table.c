@@ -2,9 +2,9 @@
 
 /**
  * shash_table_create - Creates a sorted hash table.
- * 
+ *
  * @size: A pointer to the size of the hash table.
- * 
+ *
  * Return: A pointer to the created sorted hash table.
  */
 
@@ -41,11 +41,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 /**
  * shash_table_set - Adds an element to the sorted hash table or updates.
- * 
+ *
  * @ht: A pointer to the sorted hash table.
  * @key: A pointer to the key.
  * @value: A pointer to the value.
- * 
+ *
  * Return: 1 if success, 0 otherwise.
  */
 
@@ -95,10 +95,10 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 /**
  * create_snode - Creates a new sorted hash node with the given key and value.
- * 
+ *
  * @key: A pointer to the key.
  * @value: A pointer to the value.
- * 
+ *
  * Return: A pointer to the created sorted hash node.
  */
 
@@ -146,7 +146,7 @@ shash_node_t *create_snode(const char *key, const char *value)
 
 /**
  * free_node - Deallocates memory for a sorted hash node.
- * 
+ *
  * @node: A pointer to the node to free.
  */
 
