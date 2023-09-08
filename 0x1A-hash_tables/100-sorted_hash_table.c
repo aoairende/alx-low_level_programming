@@ -81,7 +81,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			current_node->value = realloc(current_node->value, strlen(value) + 1);
 			strcpy(current_node->value, value);
 
-			free_node(node);
+			free_node(current_node);
 			return (1);
 		}
 		current_node = current_node->next;
