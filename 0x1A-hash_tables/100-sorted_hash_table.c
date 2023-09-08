@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include "sort_hash_tables.h"
 
 /**
  * shash_table_create - Creates a sorted hash table.
@@ -81,7 +82,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			current_node->value = realloc(current_node->value, strlen(value) + 1);
 			strcpy(current_node->value, value);
 
-			free_node(current_node);
+			free_node(node);
 			return (1);
 		}
 		current_node = current_node->next;
