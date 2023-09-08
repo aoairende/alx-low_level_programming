@@ -100,16 +100,3 @@ hash_node_t *create_node(const char *key, const char *value)
 
 	return (node);
 }
-
-/**
- * free_node - Deallocates memory for a hash node.
- *
- * @node: A pointer to the node to free.
-*/
-
-void free_node(hash_node_t *node)
-{
-	free(node->key);
-	free(node->value);
-	free(node);
-}
