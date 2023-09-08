@@ -11,21 +11,21 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    /* Declare a pointer to a hash node. */
-    hash_node_t *nodo;
-    unsigned long int index;
+/* Declare a pointer to a hash node. */
+hash_node_t *nodo;
+unsigned long int index;
 
-    if (key == NULL || ht == NULL)
-    return (NULL);
+if (key == NULL || ht == NULL)
+return (NULL);
 
-    /* Calculate the index of the key in the hash table. */
-    index = key_index((const unsigned char *)key, ht->size);
-    nodo = ht->array[index];
+/* Calculate the index of the key in the hash table. */
+index = key_index((const unsigned char *)key, ht->size);
+nodo = ht->array[index];
 
-    for (; nodo != NULL; nodo = nodo->next)
-    {
-        if (strcmp(nodo->key, key) == 0)
-        return (nodo->value);
-        }
-        return (NULL);
+for (; nodo != NULL; nodo = nodo->next)
+{
+if (strcmp(nodo->key, key) == 0)
+return (nodo->value);
+}
+return (NULL);
 }
