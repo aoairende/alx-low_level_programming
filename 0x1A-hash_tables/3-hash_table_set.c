@@ -38,8 +38,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current_node->key, key) == 0)
 		{
-
-            /* Update the value and reallocate memory if needed. */
 			current_node->value = realloc(current_node->value, strlen(value) + 1);
 			strcpy(current_node->value, value);
 			/* Free unused node created */
