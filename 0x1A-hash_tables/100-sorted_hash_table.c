@@ -151,7 +151,7 @@ shash_node_t *create_snode(const char *key, const char *value)
  * @node: A pointer to the node to free.
  */
 
-void free_node(shash_node_t *node)
+void free_snode(shash_node_t *node)
 {
 	free(node->key);
 	free(node->value);
